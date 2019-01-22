@@ -15,12 +15,18 @@ public class Osoitetarra {
         String firstSurLetter = lastName.substring(0,1).toUpperCase();
         String restSurName = lastName.substring(1).toLowerCase();
         
-        System.out.println(firstNameLetter + restFirstname + " " + firstSurLetter + restSurName);
         
         System.out.println("Anna katuosoite: ");
-
+        
+        String address = reader.next();
+        String firstAddress = address.substring(0,1).toUpperCase();
+        String restAddress = address.substring(1).toLowerCase();
+        
+        
         
         System.out.println("Anna postinumero ja postitoimipaikka: ");
 
+        System.out.println(firstNameLetter + restFirstname + " " + firstSurLetter + restSurName);
+        System.out.println(firstAddress + restAddress);
         }
     }
