@@ -1,3 +1,4 @@
+package viikko01;
 import java.util.Scanner;
 public class Ylinopeus {
 
