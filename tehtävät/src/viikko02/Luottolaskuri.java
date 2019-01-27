@@ -6,18 +6,25 @@ import java.util.Scanner;
 public class Luottolaskuri {
 	public static void main(String[] args) {
 		Scanner reader = new Scanner(System.in);
-		DecimalFormat twoDecimal = new DecimalFormat("0.00");
-		double amount = 1;
-
+		DecimalFormat twoDecimal = new DecimalFormat("0.00");	
 		System.out.println("Anna luotollisen ostoksen hinta: ");
-		amount = reader.nextDouble();
+		double amount = reader.nextDouble();
 		System.out.println("Anna kuukausierien lukumäärä: ");
-		double months = reader.nextDouble();
-		reader.close();
+		int months = reader.nextInt();
+		int i = 1;
+		double paymentAmount = amount / months;
+		
+		while (amount > 0) {
+			amount = amount - paymentAmount;
+			
+			System.out.println(i + ". erä " + twoDecimal.format(paymentAmount) + " euroa, luottoa jäljellä " + twoDecimal.format(amount) + " euroa");
+			i++;
+		}
 		
 		
 		
 		
 
+		reader.close();
 	}
 }
