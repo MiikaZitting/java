@@ -25,8 +25,14 @@ public class Osoitetarra {
         
         
         System.out.println("Anna postinumero ja postitoimipaikka: ");
+        
+        String areacode = reader.next();
+        String area = reader.nextLine().trim();
+        String areaFirst = area.substring(0,1).toUpperCase();
+        String areaRest = area.substring(1).toLowerCase();
 
         System.out.println(firstNameLetter + restFirstname + " " + firstSurLetter + restSurName);
         System.out.println(firstAddress + restAddress);
+        System.out.println(areacode + " " + areaFirst + areaRest);
         }
     }
