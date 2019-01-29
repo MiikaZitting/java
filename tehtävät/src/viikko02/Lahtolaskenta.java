@@ -7,6 +7,7 @@ public class Lahtolaskenta {
 			// Suorita vain jos i ei jaollinen kolmella:
 			if (i % 3 != 0) {
 				System.out.println(i);
+
 				
 			}
 		}

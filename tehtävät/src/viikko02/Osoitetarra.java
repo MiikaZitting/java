@@ -7,26 +7,35 @@ public class Osoitetarra {
 
         System.out.println("Anna etu-ja sukunimi: ");   
         String firstName = reader.next();
-        String lastName = reader.nextLine().trim();
+        String surName = reader.nextLine().trim();
         
-        String firstNameLetter = firstName.substring(0,1).toUpperCase();
-        String restFirstname = firstName.substring(1).toLowerCase();
-        
-        String firstSurLetter = lastName.substring(0,1).toUpperCase();
-        String restSurName = lastName.substring(1).toLowerCase();
-        
+        //Etunimi
+        String firstLetter = firstName.substring(0,1).toUpperCase();
+        String restLetters = firstName.substring(1).toLowerCase();
+        firstName = firstLetter + restLetters;
+        //Sukunimi
+        firstLetter = surName.substring(0,1).toUpperCase();
+        restLetters = surName.substring(1).toLowerCase();
+        surName = firstLetter + restLetters;
         
         System.out.println("Anna katuosoite: ");
-        
-        String address = reader.next();
-        String firstAddress = address.substring(0,1).toUpperCase();
-        String restAddress = address.substring(1).toLowerCase();
-        
-        
-        
+        //Osoite
+        String address = reader.nextLine();
+        firstLetter = address.substring(0,1).toUpperCase();
+        restLetters = address.substring(1).toLowerCase();
+        address = firstLetter + restLetters;
+       
         System.out.println("Anna postinumero ja postitoimipaikka: ");
+        //Postinumero & Toimipaikka
+        String areacode = reader.next();
+        String area = reader.nextLine().trim();
+        area = area.toUpperCase();
 
-        System.out.println(firstNameLetter + restFirstname + " " + firstSurLetter + restSurName);
-        System.out.println(firstAddress + restAddress);
+    
+        reader.close();
+
+        System.out.println(firstName +" " + surName);
+        System.out.println(address);
+        System.out.println(areacode + " " + area);
         }
     }
